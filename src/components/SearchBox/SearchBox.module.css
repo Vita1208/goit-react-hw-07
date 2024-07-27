@@ -1,0 +1,22 @@
+.SearchBox {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.text {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3498db;
+}
