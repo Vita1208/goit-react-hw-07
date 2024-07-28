@@ -1,9 +1,10 @@
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { HiUser } from 'react-icons/hi2';
 import { HiPhone } from 'react-icons/hi2';
+import { deleteContact } from '../../redux/contactsOps';
+
 import styles from './Contact.module.css';
-import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsSlice';
 
 function Contact({ contact }) {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ function Contact({ contact }) {
 
         <div className={styles.phone}>
           <HiPhone size={'18px'} title="phone icon" />
-          <span>{contact.number}</span>
+          <span>{contact.phone}</span>
         </div>
       </div>
 
@@ -31,7 +32,6 @@ function Contact({ contact }) {
 
 Contact.propTypes = {
   contact: PropTypes.object,
-  onDelete: PropTypes.func,
 };
 
 export default Contact;
